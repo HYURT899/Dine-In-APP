@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine In App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dine In</h1>
+        <nav>
+            <a href="#" onclick="showHome()">Home</a>
+            <a href="#" onclick="showMenu()">Menu</a>
+            <a href="#" onclick="showReservation()">Reservation</a>
+        </nav>
+    </header>
+    <main id="content">
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <h2>Welcome to Dine In</h2>
+            <p>Discover the best food and make reservations at your favorite restaurants.</p>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <ul>
+                <li>Pizza - $10</li>
+                <li>Burger - $8</li>
+                <li>Pasta - $12</li>
+                <li>Salad - $7</li>
+            </ul>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservation">
+            <h2>Make a Reservation</h2>
+            <form id="reservationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                <label for="people">Number of People:</label>
+                <input type="number" id="people" name="people" required min="1">
+                <button type="submit">Reserve</button>
+            </form>
+            <div id="confirmation"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
